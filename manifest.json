@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Hide LinkedIn Feed",
+    "description": "This extension hides the LinkedIn newsfeed.",
+    "version": "1.0",
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "",
+      "default_icon": {
+        "16": "icon.jpeg",
+        "48": "icon.jpeg"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.linkedin.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "icons": {
+      "16": "icon.jpeg",
+      "48": "icon.jpeg"
+    }
+  }
+  
